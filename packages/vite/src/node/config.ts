@@ -73,6 +73,11 @@ export interface UserConfig {
    */
   base?: string
   /**
+   * Base asset URL.
+   * @default null
+   */
+  baseAssetUrl?: string
+  /**
    * Directory to serve as plain static assets. Files in this directory are
    * served and copied to build dist dir as-is without transform. The value
    * can be either an absolute file system path or a path relative to <root>.
@@ -168,6 +173,7 @@ export type ResolvedConfig = Readonly<
     inlineConfig: UserConfig
     root: string
     base: string
+    baseAssetUrl?: string
     publicDir: string
     command: 'build' | 'serve'
     mode: string
